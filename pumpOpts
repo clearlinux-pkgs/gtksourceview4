@@ -1,0 +1,3 @@
+alias = gtksourceview
+regex = ^4\..*
+devel_version = 99
