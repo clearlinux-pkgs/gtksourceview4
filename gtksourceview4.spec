@@ -4,7 +4,7 @@
 #
 Name     : gtksourceview4
 Version  : 4.8.3
-Release  : 3
+Release  : 4
 URL      : https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.3.tar.xz
 Source0  : https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.3.tar.xz
 Summary  : Source code editing widget
@@ -85,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1648054586
+export SOURCE_DATE_EPOCH=1664155835
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -106,7 +106,7 @@ meson test -C builddir --print-errorlogs || :
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/gtksourceview4
-cp %{_builddir}/gtksourceview-4.8.3/COPYING %{buildroot}/usr/share/package-licenses/gtksourceview4/caeb68c46fa36651acf592771d09de7937926bb3
+cp %{_builddir}/gtksourceview-%{version}/COPYING %{buildroot}/usr/share/package-licenses/gtksourceview4/caeb68c46fa36651acf592771d09de7937926bb3 || :
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang gtksourceview-4
 
